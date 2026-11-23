@@ -50,12 +50,14 @@ export function FallingPetals({ particleEffect = "rose-petals" }: FallingPetalsP
     const lotusColors = ["#F472B6", "#FBCFE8", "#FFFFFF", "#F43F5E", "#E0E7FF"];
     const sparkleColors = ["#F59E0B", "#FBBF24", "#D4AF37", "#FEF08A", "#FFFFFF"];
     const balloonColors = ["#EF4444", "#3B82F6", "#10B981", "#F59E0B", "#8B5CF6", "#EC4899"];
+    const hydrangeaColors = ["#93C5FD", "#BFDBFE", "#DBEAFE", "#FFFFFF", "#FDE047", "#60A5FA", "#D4AF37"];
 
     for (let i = 0; i < count; i++) {
       let colorPalette = roseColors;
       if (particleEffect === "lotus-petals") colorPalette = lotusColors;
       if (particleEffect === "golden-sparkles") colorPalette = sparkleColors;
       if (particleEffect === "floating-balloons") colorPalette = balloonColors;
+      if (particleEffect === "hydrangea-petals") colorPalette = hydrangeaColors;
 
       particles.push({
         x: Math.random() * width,

@@ -110,6 +110,17 @@ export const BodhiLeafSvg: React.FC<{ className?: string }> = ({ className = "h-
   </svg>
 );
 
+// 7. Laurel Branch Wreath Monogram (Reference Video Style: K | A)
+export const LaurelMonogramSvg: React.FC<{ className?: string }> = ({ className = "h-8 w-8 text-blue-800" }) => (
+  <svg viewBox="0 0 100 100" className={`fill-current ${className}`}>
+    <path d="M22 68 C15 50 20 30 35 18 C33 24 35 30 40 33 C30 38 25 50 28 65 Z" opacity="0.85" />
+    <path d="M78 68 C85 50 80 30 65 18 C67 24 65 30 60 33 C70 38 75 50 72 65 Z" opacity="0.85" />
+    <text x="50" y="56" textAnchor="middle" fontSize="22" fontFamily="Cinzel, serif" fontWeight="bold" fill="currentColor">
+      K | A
+    </text>
+  </svg>
+);
+
 // -------------------------------------------------------------
 // ARCH FRAMES & CORNERS
 // -------------------------------------------------------------
@@ -151,6 +162,23 @@ const ModernGeometricFrame: React.FC<{ children: React.ReactNode; className?: st
     <div className="w-full h-full rounded-xl overflow-hidden relative border border-amber-300/40">
       {children}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+    </div>
+  </div>
+);
+
+// Hydrangea Floral Arch Frame (Reference Video Style)
+const HydrangeaFloralArchFrame: React.FC<{ children: React.ReactNode; className?: string }> = ({
+  children,
+  className,
+}) => (
+  <div
+    className={`relative w-full max-w-[310px] aspect-[3.2/4.4] rounded-t-[140px] rounded-b-2xl overflow-hidden shadow-2xl border-4 border-amber-300/80 p-2 bg-gradient-to-b from-[#e0f2fe] via-[#f0f9ff] to-[#ffffff] ${
+      className || ""
+    }`}
+  >
+    <div className="w-full h-full rounded-t-[130px] rounded-b-xl overflow-hidden relative border border-blue-200/60 shadow-inner">
+      {children}
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-transparent pointer-events-none" />
     </div>
   </div>
 );
@@ -478,5 +506,29 @@ export const TEMPLATES: Record<TemplateId, TemplateDefinition> = {
     ),
     ArchFrameSvg: ModernGeometricFrame,
     CornerSvg: GoldGeometricCorner,
+  },
+
+  // 12. Engagement Party - Pastel Hydrangea & Living Video (Kiara & Arjun)
+  "engagement-pastel-hydrangea": {
+    id: "engagement-pastel-hydrangea",
+    name: "Pastel Hydrangea & Living Video (Kiara & Arjun)",
+    category: "Engagement / Wedding",
+    description: "Powder-blue watercolor florals, 3D floral wax seal, living cinematic motion portrait, and royal navy script typography.",
+    defaultCover: "wax-seal-envelope",
+    defaultParticle: "hydrangea-petals",
+    defaultMusic: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=flute-traditional-indian-113264.mp3",
+    primaryColor: "#1E3A8A",
+    accentGold: "#D4AF37",
+    bgGradient: "from-[#F0F7FF] via-[#E2EFFF] to-[#FFFFFF]",
+    cardBg: "#FFFFFF",
+    textHeading: "text-[#1E3A8A]",
+    textBody: "text-stone-700",
+    badgeBg: "bg-[#1E3A8A]",
+    badgeText: "text-white",
+    fontHeading: "font-playfair",
+    fontBody: "font-sans",
+    HeaderIconSvg: LaurelMonogramSvg,
+    ArchFrameSvg: HydrangeaFloralArchFrame,
+    CornerSvg: FloralCorner,
   },
 };

@@ -29,7 +29,9 @@ export type TemplateId =
   | 'anniversary-golden-journey'
   // Ceremony & Inauguration Templates
   | 'ceremony-griha-pravesh'
-  | 'event-grand-opening';
+  | 'event-grand-opening'
+  // Engagement & Living Video Templates
+  | 'engagement-pastel-hydrangea';
 
 export type CoverStyle =
   | 'wax-seal-envelope'
@@ -48,6 +50,7 @@ export type SacredSymbol =
   | 'ashoka-pillar'
   | 'lotus'
   | 'ribbon'
+  | 'laurel-monogram'
   | 'none';
 
 export type ParticleEffect =
@@ -55,6 +58,7 @@ export type ParticleEffect =
   | 'golden-sparkles'
   | 'floating-balloons'
   | 'lotus-petals'
+  | 'hydrangea-petals'
   | 'none';
 
 export interface SubEvent {
@@ -96,6 +100,7 @@ export interface HeroDetails {
   invitationText?: string;
   closingLine?: string;   // e.g. "With love, blessings & warm regards"
   heroImage: string;
+  heroVideo?: string; // Optional animated living video / cinemagraph
   sacredSymbol?: SacredSymbol;
 }
 

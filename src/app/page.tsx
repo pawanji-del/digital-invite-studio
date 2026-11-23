@@ -24,6 +24,24 @@ const WHATSAPP_CONTACT_NUMBER = "919876543210"; // Agency WhatsApp Business numb
 
 const DEMO_CARDS = [
   {
+    category: "Pastel Hydrangea Engagement",
+    categoryGroup: "hindu",
+    title: "Kiara & Arjun's Engagement Party",
+    slug: "kiara-weds-arjun",
+    templateId: "engagement-pastel-hydrangea",
+    image: "/images/kiara-arjun-hero.jpg",
+    theme: "Powder Blue & Antique Gold",
+    badge: "Living Motion Video",
+    badgeColor: "bg-blue-600",
+    highlights: [
+      "3D Floral Powder-Blue Wax Seal",
+      "Living Motion Video Portrait",
+      "French Romantic Script Typography",
+      "Floating Hydrangea & White Petals",
+      "One-Tap Google Maps & WhatsApp RSVP",
+    ],
+  },
+  {
     category: "Hindu Royal Palace Wedding",
     categoryGroup: "hindu",
     title: "Aarav Weds Ananya",

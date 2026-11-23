@@ -65,6 +65,7 @@ export function CoverInteraction({
       monogram={monogram}
       hostNames={hostNames || title}
       isBuddhist={isBuddhist}
+      templateId={templateId}
       onOpen={handleOpen}
     />
   );
